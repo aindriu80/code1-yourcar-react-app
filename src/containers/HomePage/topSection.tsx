@@ -6,6 +6,7 @@ import PorcheCarImg from '../../assets/images/porche.png'
 import MclarenCarImg from '../../assets/images/mclaren-orange-big.png'
 import BlobImg from '../../assets/images/blob.svg'
 import { SCREENS } from '../../components/responsive'
+import { Button } from '../../components/button'
 
 const TopSectionContainer = styled.div`
   min-height: 400px;
@@ -98,6 +99,10 @@ const StandaloneCar = styled.div`
   }
 `
 
+const ButtonsContainer = styled.div`
+  ${tw`flex `}
+`
+
 export function TopSection() {
   return (
     <TopSectionContainer>
@@ -108,6 +113,10 @@ export function TopSection() {
           at the best price for you and get the best quality cars for as long as
           you like.
         </Description>
+        <ButtonsContainer>
+          <Button text="Book your ride" />
+          <Button theme="filled" text="Sell your car" />
+        </ButtonsContainer>
       </LeftContainer>
       <RightContainer>
         <BlobContainer>
