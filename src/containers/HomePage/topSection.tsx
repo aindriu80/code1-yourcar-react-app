@@ -26,7 +26,7 @@ const Slogan = styled.h1`
 `
 
 const Description = styled.p`
-  ${tw`overflow-hidden text-xs text-lg text-gray-800 lg:text-sm xl: sm:max-h-full max-h-12`}
+  ${tw`overflow-hidden text-xs text-gray-800 lg:text-sm xl:text-lg sm:max-h-full max-h-12`};
 `
 const BlobContainer = styled.div`
   width: 20em;
@@ -100,7 +100,7 @@ const StandaloneCar = styled.div`
 `
 
 const ButtonsContainer = styled.div`
-  ${tw`flex `}
+  ${tw`flex flex-wrap mt-4 `}
 `
 
 export function TopSection() {
