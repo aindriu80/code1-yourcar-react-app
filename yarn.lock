@@ -503,13 +503,6 @@
   dependencies:
     "@babel/types" "^7.3.0"
 
-"@types/brainhubeu__react-carousel@^2.0.5":
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/@types/brainhubeu__react-carousel/-/brainhubeu__react-carousel-2.0.5.tgz#1ae3ee5b8feab4d92a5cb4a4ee03ed286d6bf3ef"
-  integrity sha512-8YzD/lTSzIwnxUOWzFOjtDyvlvKHp52vqtX5t+YkNsSSg3kQOccJFrOI2mv7HyFA24ALYDakXohdsj/+9hFrQA==
-  dependencies:
-    "@types/react" "*"
-
 "@types/hoist-non-react-statics@*", "@types/hoist-non-react-statics@^3.3.1":
   version "3.3.1"
   resolved "https://registry.npmjs.org/@types/hoist-non-react-statics/-/hoist-non-react-statics-3.3.1.tgz"
