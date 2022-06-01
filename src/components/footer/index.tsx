@@ -1,10 +1,12 @@
+import { faEnvelope, faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import styled from 'styled-components'
 import tw from 'twin.macro'
 import { Logo } from '../logo'
 
 const FooterContainer = styled.div`
-  // min-height: 30em;
+  //min-height: 24em;
   background-color: #1d2124;
   ${tw`flex flex-col items-center justify-center min-w-full pt-10 md:pt-16`};
 `
@@ -12,12 +14,20 @@ const InnerContainer = styled.div`
   ${tw`flex flex-wrap w-full h-full max-w-screen-2xl`};
 `
 
+const BottomContainer = styled.div`
+  ${tw`flex justify-center w-full max-w-screen-2xl md:justify-start mt-7 md:mt-1`};
+`
+
+const CopyrightText = styled.small`
+  font-size: 12px;
+  ${tw`text-gray-300 `}
+`
 const AboutContainer = styled.div`
-  ${tw`flex flex-col `}
+  ${tw`flex flex-col pl-10 pr-10 mr-2 md:mr-16 md:pl-3 md:pr-3`};
 `
 
 const AboutText = styled.p`
-  ${tw`max-w-xs mt-2 text-sm font-light font-normal leading-5 text-white`}
+  ${tw`max-w-xs mt-2 text-sm font-normal leading-5 text-white `};
 `
 
 const SectionContainer = styled.div`
@@ -37,7 +47,19 @@ const ListItem = styled.li`
 `
 
 const HeaderTitle = styled.h3`
-  ${tw`mb-3 text-base font-bold text-white `}
+  ${tw`mb-3 text-2xl font-bold text-white `};
+`
+
+const HorizontalContainer = styled.div`
+  ${tw`flex items-center `};
+`
+
+const RedIcon = styled.span`
+  ${tw`flex items-center justify-center mr-2 text-base text-white bg-red-500 rounded-full w-9 h-9`}
+`
+
+const SmallText = styled.h6`
+  ${tw`text-sm text-white `}
 `
 
 export function Footer() {
@@ -92,7 +114,31 @@ export function Footer() {
             </ListItem>
           </LinksList>
         </SectionContainer>
+        <SectionContainer>
+          <HeaderTitle>Call Now</HeaderTitle>
+          <HorizontalContainer>
+            <RedIcon>
+              <FontAwesomeIcon icon={faPhoneAlt} />
+            </RedIcon>
+            <SmallText>+353 87 4434343</SmallText>
+          </HorizontalContainer>
+        </SectionContainer>
+        <SectionContainer>
+          <HeaderTitle>Email</HeaderTitle>
+          <HorizontalContainer>
+            <RedIcon>
+              <FontAwesomeIcon icon={faEnvelope} />
+            </RedIcon>
+            <SmallText>info@yourcar.com</SmallText>
+          </HorizontalContainer>
+        </SectionContainer>
       </InnerContainer>
+      <BottomContainer>
+        <CopyrightText>
+          Copyright &copy; {new Date().getFullYear()} Yourcar - AMGE 2022. All
+          rights reserved.
+        </CopyrightText>
+      </BottomContainer>
     </FooterContainer>
   )
 }
